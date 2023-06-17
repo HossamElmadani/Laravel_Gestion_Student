@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('eleves.index');
 // });
 
-Route::resource('eleves' , EleveController::class);
+Route::resource('students' , EleveController::class);

@@ -41,9 +41,9 @@ class EleveController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Eleve $eleve)
+    public function show(Eleve $student)
     {
-        return view('eleves.show',['eleve'=>$eleve]);
+        return view('eleves.show',['eleve'=>$student]);
     }
 
     /**
