@@ -62,7 +62,7 @@
           </div>
           <div class="text-sm">
             <div class="font-medium text-gray-700" name='nom' id='nom'>{{$el->id}} _ {{$el->nom}}</div>
-            <div class="text-gray-400">hossam@gmail.com</div>
+            <div class="text-gray-400">club name : {{$el->club->nom}}</div>
           </div>
         </td>
 

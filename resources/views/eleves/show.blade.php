@@ -185,13 +185,13 @@
                                 <div class="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Permanant Address</div>
-                                <div class="px-4 py-2">Arlington Heights, IL, Illinois</div>
+                                <div class="px-4 py-2 font-semibold">Club name</div>
+                                <div class="px-4 py-2"> {{$eleve->club->nom}} </div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Email.</div>
                                 <div class="px-4 py-2">
-                                    <a class="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
+                                    <a class="text-blue-800" href="mailto:jane@example.com">{{$eleve->nom}}@example.com</a>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2">
