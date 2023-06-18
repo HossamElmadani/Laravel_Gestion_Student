@@ -40,9 +40,9 @@
     <thead class="bg-gray-50">
       <tr>
         <th scope="col" class="px-6 py-4 font-medium text-gray-900">Student ID With First Name</th>
-        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Student Details</th>
         <th scope="col" class="px-6 py-4 font-medium text-gray-900">Student Last Name</th>
         <th scope="col" class="px-6 py-4 font-medium text-gray-900">Club ID</th>
+        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Student Details</th>
         <th scope="col" class="px-6 py-4 font-medium text-gray-900 float-right ">Actions</th>
       </tr>
     </thead>
@@ -65,14 +65,7 @@
             <div class="text-gray-400">hossam@gmail.com</div>
           </div>
         </td>
-        <td class="px-6 py-4">
-          <span
-            class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
-            <a class="navbar-brand" href="{{ route('students.show', $el->id) }}">Student View</a>
-          </span>
-        </td>
+
         <td class="px-6 py-4" name='prenom' id="prenom" >{{$el->prenom}}</td>
         <td class="px-6 py-4">
           <div class="flex gap-2">
@@ -82,6 +75,12 @@
               {{$el->club_id}}
             </span>
           </div>
+        </td>
+        <td class="px-6 py-4">
+          <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
+            <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+            <a class="navbar-brand" href="{{ route('students.show', $el->id) }}">Student View</a>
+          </span>
         </td>
         <td class="px-6 py-4">
           <div class="flex justify-end gap-4">
