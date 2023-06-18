@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         @vite('resources/css/app.css')
     </head>
     <body>
@@ -29,25 +31,34 @@
             relative z-10">
           <p class="w-full text-4xl font-medium text-center leading-snug font-serif">Gestion des élèves</p>
           <div class="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
+          <div class="relative">
+              <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Student ID</p>
+              <input disabled name='id' id='id' value="{{$eleve->id}}" type="text" class="  border placeholder-gray-400 focus:outline-none
+                  focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
+                  border-gray-300 rounded-md"/>
+            </div>
             <div class="relative">
               <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute">Username</p>
+                  absolute">First Name</p>
               <input  name='nom' id='nom' type="text" value="{{$eleve->nom}}" class="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                   border-gray-300 rounded-md"/>
             </div>
             <div class="relative">
-              <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</p>
+              <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Last Name</p>
               <input name='prenom' id='prenom' value="{{$eleve->prenom}}" type="text" class="border placeholder-gray-400 focus:outline-none
                   focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
                   border-gray-300 rounded-md"/>
             </div>
             <div class="relative">
-              <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
-                  absolute" >club_id</p>
-              <input name='club_id' id='club_id' type="text" value="{{$eleve->club_id}}" class="border placeholder-gray-400 focus:outline-none
-                  focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
+                  <div class="mb-3">
+                    <select class="form-select form-select-lg" name="club_id" id="">
+                      <option value="1" selected>{{$eleve->club_id}} {{$eleve->club->nom}}</option>
+                      <option value="2">2 club 2</option>
+                      <option value="3">3 club 3</option>
+                      <option value="4">4 club 4</option>
+                    </select>
+                  </div>
             </div>
             <div class="relative">
               <button type='submit' class="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500

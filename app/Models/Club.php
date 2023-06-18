@@ -12,4 +12,7 @@ class Club extends Model
     public function eleves() {
         return $this->hasMany(Eleve::class);
     }
+
+    protected $fillable = ['nom'];
+
 }

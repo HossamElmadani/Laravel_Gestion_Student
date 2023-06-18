@@ -12,7 +12,8 @@ class ClubController extends Controller
      */
     public function index()
     {
-        //
+        $club = Club::all();
+        return view('eleves.edit' , ['club'=>$club]);
     }
 
     /**
