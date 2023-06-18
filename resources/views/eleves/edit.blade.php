@@ -12,7 +12,7 @@
     <body>
 
     <!-- component -->
-    <form method='post' action="" >
+    <form method='Post' action="{{route('students.update' , $eleve->id )}}" >
       @csrf
       @method('Put')
 <div class="bg-white relative lg:py-20">
@@ -52,7 +52,7 @@
             <div class="relative">
               <button type='submit' class="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
                   rounded-lg transition duration-200 hover:bg-indigo-600 ease">Modifier</button>
-              <a class=" cursor-pointer mt-2 w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
+              <a href="/students" class=" cursor-pointer mt-2 w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500
                 rounded-lg transition duration-200 hover:bg-indigo-600 ease">Annuler</a>
             </div>
           </div>

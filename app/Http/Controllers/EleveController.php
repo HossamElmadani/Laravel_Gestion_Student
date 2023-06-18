@@ -35,7 +35,8 @@ class EleveController extends Controller
         $eleve->prenom = $request->input('prenom');
         $eleve->club_id = $request->input('club_id');
         $eleve->save();
-        return redirect('eleves');
+        return redirect('students')->with('success', 'student added successfully');
+
     }
 
     /**
@@ -49,29 +50,30 @@ class EleveController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Eleve $eleve)
+    public function edit(Eleve $student)
     {
-        return view('eleves.edit', ['eleve'=>$eleve]);
+        return view('eleves.edit', ['eleve'=>$student]);
         // return response()->json($eleve);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Eleve $eleve)
+    public function update(Request $request, Eleve $student)
     {
-        $eleve->nom = $request->input('nom');
-        $eleve->prenom = $request->input('prenom');
-        $eleve->club_id = $request->input('club_id');
-        $eleve->save();
-        return view('eleves.edit' , ['eleve'=>$eleve]);
+        $student->nom = $request->input('nom');
+        $student->prenom = $request->input('prenom');
+        $student->club_id = $request->input('club_id');
+        $student->save();
+        return redirect('students');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Eleve $eleve)
+    public function destroy(Eleve $student)
     {
-        //
+        $student->delete();
+        return redirect()->back()->with('success', 'student deleted successfully');
     }
 }

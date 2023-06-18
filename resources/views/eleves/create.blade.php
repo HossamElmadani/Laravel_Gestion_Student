@@ -12,7 +12,7 @@
     <body>
 
     <!-- component -->
-    <form method='post' action="{{route('eleves.store')}}" >
+    <form method='post' action="{{route('students.store')}}" >
       @csrf
 <div class="bg-white relative lg:py-20">
   <div class="flex flex-col items-center justify-between pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
